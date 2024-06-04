@@ -1,0 +1,12 @@
+# Ignore node modules
+node_modules
+node_modules/
+/node_modules
+/node_modules-global
+
+# Ignore all cypress/screenshots folders
+**/cypress/screenshots/
+
+# Ignore all cypress/videos folders
+**/cypress/videos/
+
