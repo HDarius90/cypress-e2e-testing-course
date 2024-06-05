@@ -33,5 +33,9 @@ describe("share location", () => {
     cy.get('[data-cy="get-loc-btn"]').click();
     cy.get('[data-cy="share-loc-btn"]').click();
     cy.get("@saveToClipboard").should("have.been.called");
+    cy.get("@saveToClipboard").should(
+      "have.been.calledWithMatch",
+      new RegExp(`${47.08}.*${32.01}.*${encodeURI("John Doe")}.*`)
+    );
   });
 });
