@@ -10,3 +10,7 @@ node_modules/
 # Ignore all cypress/videos folders
 **/cypress/videos/
 
+**/.cache/
+**/build/
+
+**/prisma/test.db
