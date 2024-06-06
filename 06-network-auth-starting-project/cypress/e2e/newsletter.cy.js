@@ -21,4 +21,15 @@ describe("Newsletter", () => {
     cy.wait("@subscribe"); // this is not necessary, we use it just to make sure the next assumption executed after intercept
     cy.contains("Email exists already");
   });
+
+  it("should successfully create a new contact", () => {
+    cy.request({
+      method: "POST",
+      url: "http://localhost:3000/newsletter",
+      body: { email: "test@example.com" },
+      form: true,
+    }).then((res) => {
+      expect(res.status).to.eq(201);
+    });
+  });
 });
